@@ -1,27 +1,43 @@
-# GBAngularAssignment
+# GB Bewerberaufgabe Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+Hallo Bewerber,
+du darfst dich heute an einer kleinen Aufgabe versuchen.
+Wir verwenden im Frontend das Framework [Angular](https://angular.io/) und du sollst dich etwas damit vertraut machen.
 
-## Development server
+Du findest hier das Repository 'GBAngularAssignment' mit dem Branch '2023'.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Wir bitten dich die folgenden zwei Aufgaben umzusetzen:
 
-## Code scaffolding
+## Aufgabe 1:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Erstell eine einfaches Menü mit zwei Menüpunkten. Es ist dir überlassen ob du eine Toolbar/Sidenav oder was ganze anderes für das Menü verwendest. Für die Darstellung kannst du zum Beispiel [Angular-Material](https://material.angular.io/components/categories) verwenden. Auch andere UI-Frameworks oder nur SCSS/CSS sind ok. Das Design liegt ganz klar nicht im Fokus der Aufgabe.
 
-## Build
+Das Menü soll zwei Menüpunkte beinhalten: 'Startseite' und 'Http-Calls'. Erstelle für jeden Menüpunkt eine neue Komponente. Ein Klick auf den Menüpunkt soll die entsprechende Komponente darstellen. Beim Start der App soll die Startseite dargestellt werden. Der Inhalt der Startseite spielt keine Rolle. Der Inhalt von 'Http-Calls' wird in **Aufgabe 2** erklärt.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Arbeite dich in das Thema [Routing](https://angular.io/guide/routing-overview) ein. Erstelle zwei Routen um die Navigation in die App einzubauen. Du kannst auch eigene Module Feature-Module mit LazyLoading verwenden.
 
-## Running unit tests
+## Aufgabe 2:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Zielstellung: Die Komponente/Feature 'Http-Calls' lädt beliebige Daten von einer freien API und stellt diese Daten aufgearbeitet im UI der Komponente dar.
 
-## Running end-to-end tests
+Du bist frei in der Umsetzung, der Daten und der Wahl der API. Im Netz findest du eine Menge an freien APIs die du verwenden kannst.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Wenn du fertig bist stelle schicke dein Projekt bitte an tom.delle@goldbeck.de zurück.
 
-## Further help
+## Hinweise
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- du kannst dir natürlich Informationen im Internet besorgen
+- einige Suchbegriffe kann ich als Hinweis geben: Clean Code / Clean Architecture / State Management / BehaviourSubject Services / Async Pipe / ChangeDetection / Lazy Loading
+- nützliche Links:
+  - [Routing-Tutorial](https://www.codingame.com/playgrounds/8104/angular-router-tutorial) kann für die **Aufgabe 1** adaptiert werden
+  - [Http-Calls](https://codecraft.tv/courses/angular/http/core-http-api/) mit Angular für die **Aufgabe 2**
+- such dir einfach eine freie API aus dem Netz, eine Übersicht findest du hier: [freie APIs](https://github.com/public-apis/public-apis#cryptocurrency)
+- z.B. die API [CoinCap](https://docs.coincap.io) braucht keinen API-Key
+  Du kannst dir selbst eine oder mehrere Komponenten aussuchen und diese für die Darstellung verwenden.
+
+- bei Bewertung sammelst du Punkte mit Clean Code und einer sauberen und performanten Architektur
+- es zählt nicht wer am meisten Code schreibt
+- entwickle bitte so als würdest du an einer großen Enterprise App arbeiten
+- wenn du irgendwo nicht weiter kommst: frag bitte einfach nach!
+
+# Viel Spaß 😎
