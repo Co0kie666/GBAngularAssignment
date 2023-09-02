@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HttpCallsComponent } from './http-calls/http-calls.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
