@@ -7,12 +7,16 @@
     position: absolute;   
 }
 
-.navbar {
+.nav-bar {
     display: flex;
 }
 
-.navbar > li {
+.nav-bar > li {
     margin: auto;
     list-style: none;
     cursor: pointer;
+}
+
+.nav-button {
+    background-color: #60c0bd;
 }

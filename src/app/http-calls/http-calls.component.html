@@ -1,1 +1,22 @@
 <app-nav-menu></app-nav-menu>
+
+<div class="table-container">
+    <table class="cat-table">
+        <tbody>
+            <tr>
+                <td *ngFor="let catImage of catImages | slice:0:5;">
+                    <img class="cat-image" src="{{ catImage.url }}">
+                </td>
+            </tr>
+            <tr>
+                <td *ngFor="let catImage of catImages | slice:5:10;">
+                    <img class="cat-image" src="{{ catImage.url }}">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div *ngIf="catImages.length > 0" class="refresh-container">
+    <button mat-button class="refresh-button" (click)="getImages(10)">Refresh</button>
+</div>
