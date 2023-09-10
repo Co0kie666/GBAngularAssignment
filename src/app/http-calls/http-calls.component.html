@@ -4,12 +4,12 @@
     <table class="cat-table">
         <tbody>
             <tr>
-                <td *ngFor="let catImage of catImages | slice:0:5;">
+                <td *ngFor="let catImage of catImagesData | slice:0:5;">
                     <img class="cat-image" src="{{ catImage.url }}">
                 </td>
             </tr>
             <tr>
-                <td *ngFor="let catImage of catImages | slice:5:10;">
+                <td *ngFor="let catImage of catImagesData | slice:5:10;">
                     <img class="cat-image" src="{{ catImage.url }}">
                 </td>
             </tr>
@@ -17,6 +17,6 @@
     </table>
 </div>
 
-<div *ngIf="catImages.length > 0" class="refresh-container">
-    <button mat-button class="refresh-button" (click)="getImages(10)">Refresh</button>
+<div *ngIf="catImagesData.length > 0" class="refresh-container">
+    <button [disabled]="isDisabled" mat-button class="refresh-button" (click)="loadOtherImages()">Refresh</button>
 </div>

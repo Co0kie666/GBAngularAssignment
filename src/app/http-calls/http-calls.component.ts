@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { CatImagesService } from '../services/cat-images.service';
+import { timeout } from 'rxjs';
 
 @Component({
   selector: 'app-http-calls',
@@ -8,21 +9,23 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HttpCallsComponent {
 
-  constructor(private http: HttpClient) {}
+  catImagesData: any[] = [];
+  isDisabled: boolean = false;
 
-  catImages: any[] = [];
-  baseUrl: string = 'https://api.thecatapi.com/v1/images/search'
+  constructor(private catImagesService: CatImagesService) {}
 
-  ngOnInit() {
-    this.getImages(10)
+  ngOnInit(): void {
+    this.loadOtherImages()
   }
 
-  getImages(limit: number) {
-    const url = this.baseUrl + '?limit=' + limit
-
-    this.http.get(url).subscribe((data: any) => {
-      this.catImages = data; 
-      console.log(this.catImages)
-    });
+  loadOtherImages() {
+    this.catImagesService.getImages(10).subscribe((data: any) => {
+      this.catImagesData = data;
+    }); 
+    
+    this.isDisabled = true;
+    setTimeout(() => {
+      this.isDisabled = false
+    }, 5000); //* 5 second delay to ensure the button is not spammable
   }
 }
